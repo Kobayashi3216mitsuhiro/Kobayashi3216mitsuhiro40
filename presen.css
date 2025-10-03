@@ -1,0 +1,52 @@
+
+
+
+body {
+    margin: 0;
+    /* font-family: 'Courier New', monospace; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    color: #fff;
+    font-weight: bold;
+  }
+  .all {
+    margin: auto;
+    background-color:rgb(121, 121, 121)
+    
+  }
+  .main {
+      background-color: #9aa3ab;
+      margin: auto;
+      width: 600px;
+      height : 400px; 
+      padding: 40px;
+      font-size: 1.5rem;
+      line-height: 2.2rem;
+      color: #fff;
+      position: relative;       /* 子要素の絶対位置指定の基準にする */
+      /* display:flex;これがないとセンターリングできない */
+    /* justify-content: center; 横方向の中央揃え */
+    /* align-items: center; 縦方向の中央揃え */
+  }
+  .highlight {
+    color: #b35a3c;
+    font-style: italic;
+  }
+  .sub {
+    background-color: #222;
+    height : 100px;
+    display:flex;/*これがないとセンターリングできない*/
+    justify-content: center; /* 横方向の中央揃え */
+    align-items: center; /*縦方向の中央揃え*/
+    font-size: 1.2rem;
+  }
+  
+
+.myphoto {
+  position: absolute;       /*親要素（.main）を基準に配置*/
+  bottom: 20px;             /* 下から20pxの位置 */
+  right: 20px;              /* 右から20pxの位置 */
+  width: 200px;             /* 画像サイズ調整 */
+  height: auto;
+  border-radius: 8px;
+}
