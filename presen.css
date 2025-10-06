@@ -1,32 +1,25 @@
 
-
-
 body {
     margin: 0;
     /* font-family: 'Courier New', monospace; */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    /* color: #fff; */
+    background-color:rgb(121, 121, 121);
+  }  
+  
+  /* ページ共通設定 */
+  .main {
+    background-color: #9aa3ab;
+    margin: auto;
+    width: 800px;
+    height : 395px; 
+    padding: 40px;  /*要素内側の余白設定*/
+    font-size: 1.8rem;
+    line-height: 2.2rem;
     color: #fff;
     font-weight: bold;
-  }
-  .all {
-    margin: auto;
-    background-color:rgb(121, 121, 121)
-    
-  }
-  .main {
-      background-color: #9aa3ab;
-      margin: auto;
-      width: 600px;
-      height : 400px; 
-      padding: 40px;
-      font-size: 1.5rem;
-      line-height: 2.2rem;
-      color: #fff;
-      position: relative;       /* 子要素の絶対位置指定の基準にする */
-      /* display:flex;これがないとセンターリングできない */
-    /* justify-content: center; 横方向の中央揃え */
-    /* align-items: center; 縦方向の中央揃え */
+    position: relative;       /* 子要素の絶対位置指定の基準にする */
   }
   .highlight {
     color: #b35a3c;
@@ -34,19 +27,131 @@ body {
   }
   .sub {
     background-color: #222;
-    height : 100px;
-    display:flex;/*これがないとセンターリングできない*/
-    justify-content: center; /* 横方向の中央揃え */
-    align-items: center; /*縦方向の中央揃え*/
+    height : 105px;
+    /* text-align: center; ドットの位置がそろわない　 */ 
+    display:flex;/*flexで上下左右を決められる*/
+    justify-content: center; /*横方向の中央揃え*/
+    align-items: center; /*縦方向の中央揃え:width: */
+    color: #fff;
     font-size: 1.2rem;
+    position: relative; 
+  }
+  .sub a {
+  position: absolute;       /*親要素（.sub）を基準に配置*/
+  bottom: 20px;             /* 下から20pxの位置 */
+  right: 20px; 
+  }
+
+
+/* ページ１の設定 */
+  .mainTop {
+    margin: auto;    
+    color: #000000;
+    background-color:rgb(255, 255, 255);
+    width: 70%;
+    height: 480px; 
+    position: relative;
+  }
+  .mainTop p {
+    font-size: 2rem;
+    position: absolute;       /*親要素（.mainTop）を基準に配置*/
+    top: 20px;             /* 下から20pxの位置 */
+    right: 20px;   
+  }
+  .myphotoTop {
+    position: absolute;       /*親要素（.mainTop）を基準に配置*/
+    bottom: 10px;             /* 下から20pxの位置 */
+    right: 10px;              /* 右から20pxの位置 */
+    width: 150px;             /* 画像サイズ調整 */
+    height: auto;             /*幅に連動*/
+    border-radius: 10px;       /*四隅のr設定　50%で円*/
   }
   
+  .photoP1Step {
+    position: absolute;       /*親要素（.mainTop）を基準に配置*/
+    top: 0px;               /* 下から20pxの位置 */
+    left: 0px;              /* 右から20pxの位置 */
+    width: 350px;             /* 300px画像サイズ調整 */
+    height: auto;
+  }
+  
+/*p3ページ設定*/
+.page3-h3 {
+  text-align: center;
+  /* display:flex; */
+  /* justify-content: center; 横方向の中央揃え */
+  /* align-items: center; 縦方向の中央揃え */
+  /* height: 40px;   */
+} 
 
-.myphoto {
+.page3-p {
+  text-align: center;
+} 
+
+
+ul {
+  font-size: 25px;
+  background-color: rgb(180, 180, 180);
+  border: 2px rgb(100, 100, 100) solid;
+  border-radius :8px;/*角の丸み*/
+  padding: 0.5em 0.5em 0.5em 2em;
+  /* margin-top:10px; */
+  position: relative;   /*子要素タイトルタブli:afterに対する基準*/
+  position: absolute;   /*親要素（.page3）を基準に配置*/
+  bottom: 0px;          /* 下から20pxの位置 */
+  left: 200px;          /* 右から20pxの位置 */
+}
+
+ul li:after {
+  /*タイトルタブ*/
+  font-size: 20px;
+  background: rgb(180, 180, 180);
+  color: #fff;
+  position: absolute;
+  left: -2px;
+  bottom: 100%;
+  padding: 1px 7px;
+  border: 2px rgb(100, 100, 100) solid;
+  border-radius :8px;/*角の丸み*/
+  content: "中小企業の現状";/*タブの文字*/
+  letter-spacing: 0.05em;/*字間*/
+}
+
+ 
+/* 最終ページ設定 */
+.myphotoButton {
   position: absolute;       /*親要素（.main）を基準に配置*/
   bottom: 20px;             /* 下から20pxの位置 */
   right: 20px;              /* 右から20pxの位置 */
   width: 200px;             /* 画像サイズ調整 */
   height: auto;
-  border-radius: 8px;
+  border-radius: 50%;       /*四隅のr設定　50%で円*/
+  margin-bottom:8px
+}
+.page6-p {
+  position: absolute;
+  top: 50px;
+  left: 40px;
+}
+
+.mycode {
+  position: absolute;       /*親要素（.main）を基準に配置*/
+  top: 40px;             /* 下から20pxの位置 */
+  left: 50px;              /* 右から20pxの位置 */
+  width: 600px;             /* 画像サイズ調整 */
+  height: auto;
+}
+
+.mycodeButton {
+  position: absolute;       /*親要素（.main）を基準に配置*/
+  bottom: 20px;             /* 下から20pxの位置 */
+  right: 10px;              /* 右から20pxの位置 */
+  width: 220px;             /* 画像サイズ調整 */
+  height: auto;
+  background:none;          /*htmlのボタン表示名を追加し色を設定するとボタンが表示される*/
+  border: none;
+  border-radius: 8px;       /*四隅のr設定　50%で円*/
+  display:flex;
+  flex-direction: column;    /* 縦並び */
+  align-items: center;       /* 中央揃え */
 }
